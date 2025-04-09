@@ -1,0 +1,11 @@
+- name: Ansible playbook base
+  hosts:
+    # Your list of hosts here
+    - AW-1
+  roles:
+    # Add roles here
+
+  tasks:
+    - name: Debugerino
+      ansible.builtin.debug:
+        msg: "Hello world!"
