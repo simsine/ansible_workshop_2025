@@ -17,4 +17,4 @@ The VMs are already created and joined to Tailscale. So they should be reachable
 
 ## Final challenge
 
-At the end of this workshop, you will delete your VM, remake it and join in to tailscale. Then you should be able to recreate a similar config state to before using only a single ansible playbook run
+Can you use this on an empty server?
