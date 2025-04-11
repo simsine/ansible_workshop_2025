@@ -1,11 +1,13 @@
 - name: Ansible playbook base
   hosts:
     # Your list of hosts here
-    - AW-1
+    - AW-7
   roles:
     # Add roles here
+    - common
+    - nginx
 
   tasks:
-    - name: Debugerino
-      ansible.builtin.debug:
-        msg: "Hello world!"
+    # - name: Debugerino
+    #   ansible.builtin.debug:
+    #     msg: "Hello world!"

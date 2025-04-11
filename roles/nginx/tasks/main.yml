@@ -1,0 +1,37 @@
+---
+- name: Install nginx
+  ansible.builtin.apt:
+    name: nginx
+  become: true
+
+- name: Add site to nginx
+  ansible.builtin.copy:
+    src: default
+    dest: /etc/nginx/sites-enabled
+  become: true
+
+- name: Create site folder
+  ansible.builtin.file:
+    state: directory
+    path: /var/www/site
+  become: true
+
+- name: Copy html file
+  ansible.builtin.copy:
+    src: index.html
+    dest: /var/www/site/
+  become: true
+
+- name: Restart nginx service
+  ansible.builtin.service:
+    name: nginx
+    state: restarted
+    enabled: true
+  become: true
+
+# - name: Enable nginx service and ensure started
+#   ansible.builtin.service:
+#     name: nginx
+#     state: started
+#     enabled: true
+#   become: true
