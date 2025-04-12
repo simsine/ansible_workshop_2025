@@ -4,9 +4,9 @@
     - AW-7
   roles:
     # Add roles here
-    - common
+    # - common
     - nginx
-
+    # - example_role
   tasks:
     # - name: Debugerino
     #   ansible.builtin.debug:

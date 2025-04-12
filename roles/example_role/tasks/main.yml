@@ -1,7 +1,7 @@
 ---
 - name: Example task
   ansible.builtin.debug:
-    msg: "{{ example_role_some_variable }}"
+    msg: "{{ ansible_user_id }}"
 - name: Create User
   ansible.builtin.user:
     name: "simsine"
